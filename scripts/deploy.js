@@ -6,7 +6,7 @@ async function main() {
   const _value = hre.ethers.utils.parseEther("10");
 
   const Faucet = await hre.ethers.getContractFactory("Faucet");
-  const faucet = await Lock.deploy({ value: _value });
+  const faucet = await Faucet.deploy({ value: _value });
 
   await faucet.deployed();
 
